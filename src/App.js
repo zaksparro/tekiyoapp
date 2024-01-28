@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Container from './Container';
+import Accueil from './componants/Accueil/accueil'; 
+import Box3 from './componants/box3/boxparent3';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Container>
+        <Routes>
+          <Route path="/" element={<Accueil />} />
+          <Route path="/box3" element={<Box3 />} /> {/* Mise à jour du chemin */}
+        </Routes>
+      </Container>
+    </Router>
   );
 }
 

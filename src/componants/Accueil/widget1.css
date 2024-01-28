@@ -1,0 +1,231 @@
+
+/* Dans ton fichier CSS (widget1.css) */
+
+.images-icon,
+.text-widget {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Ajoute cette ligne pour la transition */
+}
+
+
+.images-icon.show,
+.text-widget.show {
+  opacity: 1;
+}
+
+.button-container {
+  display: flex;
+  overflow-x: auto; /* Ajoutez cette ligne pour permettre le défilement horizontal */
+}
+/* Styles généraux */
+.une-equipe-dedie {
+  position: relative;
+}
+
+.heure {
+  border-radius: 24px;
+  background-color: #b0b0b0;
+  padding: 0 11px 0 10px;
+}
+
+.heure,
+.widget-heure {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.images-icon {
+  width: 100%;
+  height: auto;
+  min-height: 20px;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.une-quipe-ddi {
+  margin: 0;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+.images-text,
+.text-widget {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #b0b0b0;
+  text-align: center; /* Ajoute cette ligne pour centrer le texte */
+}
+
+.images-text {
+  z-index: 1;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 0 8px;
+  gap: 37px;
+  text-align: center;
+  font-size: 20px;
+  color: #b0b0b0;
+}
+
+.rectangle-pair,
+.rectangle-pair1,
+.rectangle-pair2,
+.rectangle-pair3 {
+  height: 100%;
+  width: 41.5px;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  bottom: 0;
+  border-radius: 49px;
+}
+
+.rectangle-pair {
+  left: 0;
+  background-color: #b0b0b0;
+}
+
+.rectangle-pair1,
+.rectangle-pair2,
+.rectangle-pair3 {
+  background-color: rgba(176, 176, 176, 0.2);
+}
+
+.rectangle-pair1 {
+  left: 45.5px;
+}
+
+.rectangle-pair2,
+.rectangle-pair3 {
+  right: 45.5px;
+}
+
+.rectangle-pair3 {
+  right: 0;
+}
+
+.split-frame {
+  height: 3px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  gap: 4px;
+  margin-top: auto;
+}
+.img {
+  max-width: 80%;
+  height: auto;
+}
+
+.sliders,
+.widget-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+}
+
+/* Pour la version PC */
+@media only screen and (min-width: 900px) {
+  .widget-1 {
+    height: auto;
+    align-self: flex-end;
+    max-width: 300px;
+    width: 100%;
+    flex: 1;
+    border-radius: 24px;
+    background-color: #090505;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 11px;
+    gap: 37px;
+    text-align: center;
+    font-size: 14px;
+    color: #090505;
+    font-family: "SF Pro Display";
+    margin-left: auto;
+    margin-right: 5%;
+    transition: height 0.5s ease-in-out; /* Ajoute cette ligne pour la transition de la taille */
+  }
+}
+
+/* Pour la version mobile */
+@media only screen and (max-width: 900px) {
+  .widget-1 {
+    max-height: 100%;
+    flex: 1;
+    border-radius: 24px;
+    background-color: #090505;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 11px;
+    gap: 10px;
+    text-align: left;
+    font-size: 14px;
+    color: #090505;
+    font-family: "SF Pro Display";
+    margin-left: 0;
+    transition: height 0.5s ease-in-out; /* Ajoute cette ligne pour la transition de la hauteur */
+  }
+
+  .images-icon {
+    width: auto;
+    max-width: 100%;
+    min-height: 50px;
+    max-height: 50%;
+    flex: 1 1;
+    position: relative;
+    border-radius: 24px;
+    object-fit: cover;
+  }
+
+  .img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  /* Ajoutez ces règles pour ajuster la taille des images dans la version mobile */
+
+  /* Pour la première image (imagewidget1) */
+  .imagewidget1 img {
+    max-width: 100%; /* Ajustez cette valeur en fonction de la taille souhaitée */
+    max-height: 100%;
+  }
+
+  /* Pour la deuxième image (imagewidget2) */
+  .imagewidget2 img {
+    max-width: 100%; /* Ajustez cette valeur en fonction de la taille souhaitée */
+    max-height: 100%;
+  }
+
+  /* Pour la troisième image (imagewidget3) */
+  .imagewidget3 img {
+    max-width: 100%; /* Ajustez cette valeur en fonction de la taille souhaitée */
+    max-height: 100%;
+  }
+
+  /* Ajoute les styles pour gérer l'opacité dans la version mobile */
+  .images-icon.show {
+    opacity: 1;
+  }
+
+  .images-icon.hide {
+    opacity: 0;
+  }
+}

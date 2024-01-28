@@ -1,0 +1,22 @@
+/* Style de base pour la version PC */
+.box-2 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.content {
+  align-items: flex-start;
+}
+
+/* Ajout de styles pour la version mobile */
+@media only screen and (max-width: 900px) {
+  .section2 {
+    padding-right: 10px; /* Ajoute un padding à droite pour la version mobile */
+    flex-direction: row;
+  }
+}

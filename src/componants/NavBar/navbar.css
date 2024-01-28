@@ -1,0 +1,47 @@
+.nav-bar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    }
+.nav-bar .logo {
+    height: 45px;
+    position: relative;
+    width: 43px;
+    }
+.nav-bar .text {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    position: relative;
+    }
+.nav-bar .menu {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 9px;
+    position: relative;
+    }
+
+.nav-bar .text-wrapper {
+        color: #000000;
+        font-family: "SF Pro Display-Heavy";
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: normal;
+        margin-top: -1px;
+        position: relative;
+        white-space: nowrap;
+        width: fit-content;
+        }
+.nav-bar .rectangle {
+        background-color: #000000;
+        border-radius: 19px;
+        height: 8px;
+        position: relative;
+        width: 8px;
+        }
+

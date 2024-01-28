@@ -1,0 +1,6 @@
+.custom-button {
+    max-height: 35px; /* Ajustez la valeur selon vos préférences */
+    overflow: hidden;
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    text-overflow: ellipsis; /* Ajoute des points de suspension (...) pour indiquer un texte coupé */
+  }
