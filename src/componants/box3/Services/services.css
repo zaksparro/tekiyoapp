@@ -1,0 +1,134 @@
+.services-container {
+  display: flex;
+  flex-wrap: none;
+  justify-content: center;
+}
+
+.service-item__container {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-width: 250px; /* Largeur minimale de chaque service */
+  max-width: 415px;
+  height: 146px; /* Hauteur par défaut */
+  border-radius: 24px;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  z-index: 1;
+  margin: 10px;
+}
+
+.service-item__container.selected {
+  width: 100%; /* Étend l'élément sélectionné à la largeur complète */
+  max-width: none;
+  height: 100%;
+  height: 500px; /* Hauteur ajustée pour l'élément sélectionné */
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  z-index: 3;
+}
+
+.service-item__container.hidden {
+  position: relative;
+  display: none;
+  z-index: 1;
+  width: 0; /* Réduit la largeur à zéro pour les éléments cachés */
+  height: 0; /* Réduit la hauteur à zéro */
+  opacity: 0;
+  margin: 0;
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  pointer-events: none; /* Désactive les événements de souris */
+}
+
+.service-item__title,
+.service-item__number {
+  position: absolute;
+  color: #B0B0B0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0 20px 10px;
+}
+
+.service-item__title {
+  font-size: 5vh;
+  font-weight: 100;
+  left: 0;
+  bottom: 0;
+}
+
+.service-item__number {
+  font-size: 8vh;
+  font-weight: 100;
+  bottom: 0;
+  right: 0;
+}
+
+.additional-services-spacing {
+  margin-top: 1rem; /* Espacement en haut du composant 3D */
+}
+
+.additional-services-container {
+  position: relative; /* Le parent direct doit être positionné relativement */
+  width: calc(100% - 15px); /* Soustrait 15px de la largeur totale pour l'écart */ /* Ajoute un écart de 15px sur le côté droit */
+  transition: transform 0.3s ease-in-out; /* Transition douce pour l'animation */
+  /* Ajoutez d'autres styles comme nécessaires pour le conteneur */
+}
+
+.saas-container {
+  position: absolute; /* Pour le positionnement absolu de saas-item */
+  margin-bottom: 1rem; /* Espacement en bas du composant SAAS */
+  /* Ajoutez ici des styles supplémentaires si nécessaire */
+}
+
+/* Styles spécifiques pour l'item SAAS */
+.saas-item {
+  position: absolute;
+  top: 0; /* Aligner le haut du composant avec le haut de son conteneur parent */
+  left: 50%; /* Positionner à 50% de la gauche du conteneur parent */
+  transform: translateX(-50%); /* Décaler de moitié pour centrer l'élément */
+  width: calc(38.2% - 100px); /* Adapter la largeur en fonction de la taille de "3D" */
+  height: auto; /* La hauteur s'ajuste en fonction du contenu */
+  max-width: 415px; /* Largeur maximale pour éviter que l'élément soit trop grand */
+  transition: all 0.3s ease; /* Transition douce pour les animations */
+}
+ 
+.saas-item.selected {
+  position: relative; /* ou relative, selon le besoin de positionnement */
+  width: 100%; /* S'étend à la largeur du conteneur parent */
+  max-width: px; /* ou toute autre largeur maximale souhaitée */
+  height: 500px; /* Hauteur ajustée pour correspondre aux autres éléments */
+  /* Assurez-vous d'ajuster les transitions si nécessaire */
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  /* Autres styles comme z-index, si nécessaire */
+  z-index: 2; /* Assurez-vous qu'il passe au-dessus des autres éléments */
+}
+
+.saas-container.selected {
+  position: relative; /* Change la position de absolute à relative pour le container */
+}
+
+.additional-services-container.hidden {
+  display: none; /* Cache complètement la division et tous ses enfants */
+}
+
+/* Ajoutez cette classe à votre fichier services.css */
+.saas-expanded {
+  position: relative !important; /* !important pour s'assurer que cela l'emporte sur les autres styles */
+  width: 100%; /* Utilisez 100% si vous voulez qu'il prenne toute la largeur de son conteneur parent */
+  height: 100%; /* Utilisez 100% si vous voulez qu'il prenne toute la hauteur de son conteneur parent */
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease-in-out; /* Réglez la durée de l'animation selon les besoins */
+}
+
+.saas-container.expanded {
+  position: relative; /* Utiliser fixed pour couvrir toute la fenêtre */
+  width: 100%; /* 100% de la largeur de la fenêtre */
+  height: 100%; /* 100% de la hauteur de la fenêtre */
+  top: 0;
+  left: 0;
+  /* Ajoutez tout style supplémentaire pour l'état étendu ici */
+}

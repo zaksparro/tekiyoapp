@@ -1,16 +1,27 @@
 .box {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column; /* Espacement vertical */
+  height: 100vh; /* Prend toute la hauteur de la vue */
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.entrance-section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100vh; /* Utilise vh pour la hauteur de la fenêtre */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* Aucun padding nécessaire ici si tu utilises padding-top sur .box */
 }
 
-.content {
-  flex: 1; /* Utilise le reste de l'espace disponible */
-  align-items: flex-start;
-  padding-left: 20px; /* Ajoute un espacement à gauche */
-}
-
-.accueil .section2 {
-  align-self: flex-end;
+/* CSS pour la section Agence pour s'assurer qu'il est aligné à gauche */
+.agence-section {
+  display: flex;
+  justify-content: flex-start; /* Aligner à gauche */
+  width: 100%;
+  /* Ajoute un padding à gauche si nécessaire */
+  padding-left: 20px; /* Ajuste cette valeur comme tu le souhaites */
 }

@@ -1,0 +1,13 @@
+.services-container {
+  display: flex; /* Alignement horizontal des items */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.service-item__image {
+    width: 100%; /* Ajustez selon le besoin */
+    height: auto; /* Garde le ratio de l'image */
+    /* Ajoutez d'autres styles si nécessaire, comme border-radius, box-shadow, etc. */
+  }

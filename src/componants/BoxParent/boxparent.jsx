@@ -1,31 +1,21 @@
 // BoxParent.jsx
-import React, { useState } from 'react';
-import NavBar from '../NavBar/navbar';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Entree from '../Entree/entree';
 import Agence from '../Agence/agence';
-import BoxParent2 from '../BoxParent2/boxparent2';
+import '../../animations/ScaleIn.css'; // Assure-toi que les chemins sont corrects
+import '../../animations/ScaleOut.css';
 
-const BoxParent = ({ currentComponent, setCurrentComponent }) => {
-  const [isBoxParent2Visible, setIsBoxParent2Visible] = useState(false);
-
-  const toggleVisible = () => {
-    setIsBoxParent2Visible(!isBoxParent2Visible);
-  };
-
-  const boxStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    height: '100%',
-    width: '100%',
-  };
-
+const BoxParent = () => {
   return (
-    <div className="box" style={boxStyle}>
-      <NavBar />
-      {isBoxParent2Visible ? <BoxParent2 currentComponent={currentComponent} setCurrentComponent={setCurrentComponent} /> : <Entree toggle={toggleVisible} />}
-      <div className="content">
-        {isBoxParent2Visible ? null : <Agence />}
+    <div className="box">
+      {/* Utilise Routes et Route pour définir les chemins */}
+      <Routes>
+        <Route path="/" element={<div className="entrance-section"><Entree /></div>} />
+        {/* Ajoute d'autres chemins si nécessaire */}
+      </Routes>
+      <div className="agence-section">
+        <Agence />
       </div>
     </div>
   );

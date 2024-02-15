@@ -1,5 +1,4 @@
 // moncompte.jsx
-import PropTypes from "prop-types";
 import React from "react";
 import './moncompte.css';  // Ajuste le chemin
 

@@ -1,19 +1,18 @@
 // Container.jsx
 
-import React, { useState } from 'react';
-import './Container.css';
-import BoxParent from './componants/BoxParent/boxparent.jsx';
-import BoutonMonCompte from './componants/MonCompte/moncompte';
+import React from 'react';
+import NavBar from './componants/NavBar/navbar'; // Assure-toi que le chemin est correct
+import BoutonMonCompte from './componants/MonCompte/moncompte'; // Assure-toi que le chemin est correct
+import './Container.css'; // Assure-toi que le chemin est correct
 
-const Container = () => {
-  const [currentComponent, setCurrentComponent] = useState('Accueil');
-
+const Container = ({ children }) => {
   return (
     <div className="container">
-      <BoxParent currentComponent={currentComponent} setCurrentComponent={setCurrentComponent} />
+      <NavBar />
       <BoutonMonCompte />
+      {children} {/* Les composants enfants seront rendus ici */}
     </div>  
   );
-}
+};
 
 export default Container;

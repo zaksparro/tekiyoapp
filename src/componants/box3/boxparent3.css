@@ -1,0 +1,23 @@
+.box3-button {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ensemble {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* This will vertically center your items */
+    align-items: center; /* This will horizontally center your items */
+    height: 100%; /* This makes sure your container is the full height of the viewport */
+    gap: 15px; /* Adjust this value to add space between your button section and services section */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .box3-button,
+.box3-services {
+  flex: 0 0 auto; /* This prevents the flex items from growing or shrinking */
+  height: auto;
+}

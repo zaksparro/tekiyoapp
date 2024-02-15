@@ -1,11 +1,13 @@
 .container {
+  margin: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Aligner les éléments au début pour qu'ils ne soient pas centrés */
   align-items: center;
   width: calc(100% - 40px);
   height: calc(100vh - 40px);
-  margin: 20px;
-  padding: 20px;
+  padding-top: 60px; /* La hauteur de la navbar, ajuste selon la hauteur réelle de ta navbar */
+  padding-left: 20px;
+  padding-right: 20px;
   flex-direction: column;
   background: #B0B0B0;
   border-radius: 24px;
@@ -17,3 +19,40 @@
   height: 100%;
   width: 100%;
 }
+
+.navbar {
+  width: 100%; /* Prend toute la largeur */
+  position: fixed; /* Fixe la navbar en haut */
+  top: 0; /* Alignée en haut */
+  left: 0; /* Alignée à gauche */
+  z-index: 1000; /* S'assure qu'elle soit au-dessus des autres éléments */
+}
+
+.content-after-navbar {
+  margin-top: 60px; /* La hauteur de la navbar, ajuste selon la hauteur réelle de ta navbar */
+}
+
+/* CSS pour BoxParent */
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Centrer les enfants verticalement */
+  height: 100vh; /* Prendre toute la hauteur de la vue */
+  width: 100%;
+}
+
+/* CSS pour le bouton "ENTRER" */
+.entrance-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Aucune modification nécessaire ici si tu veux juste centrer le bouton */
+}
+
+/* CSS pour le texte "AGENCE DE DÉVELOPPEMENT WEB" */
+.agence {
+  margin-top: auto; /* Pousser le texte vers le bas */
+  align-self: flex-start; /* Aligner le texte à gauche */
+}
+

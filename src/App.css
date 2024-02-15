@@ -6,3 +6,36 @@ html, body {
   overflow: hidden; /* Empêche le scrolling */
   background-color: #090505; /* Définit la couleur de fond en transparent pour ne pas interférer */
 }
+
+/* Animation d'entrée */
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+/* Animation de sortie */
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Thin';
+  src: url('./src/fonts/SF-Pro-Display-Thin.otf') format('truetype');
+  font-weight: 100; /* Ou une autre valeur appropriée pour Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Regular';
+  src: url('./fonts/SF-Pro-Display-Regular.otf') format('truetype');
+  font-weight: 400; /* Ou une autre valeur appropriée pour Regular */
+  font-style: normal;
+}

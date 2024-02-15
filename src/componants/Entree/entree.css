@@ -1,58 +1,53 @@
-.entree {
-    align-items: flex-start;
-    display: flex;
-    gap: 10px;
-    justify-content: space-around;
-    position: relative;
-}
-
-.entree .div-wrapper {
-    align-items: center;
-    align-self: stretch;
+/* entree.css */
+.button-entree {
     background-color: #090505;
-    border-radius: 500px;
+    color: #B0B0B0;
+    border: none;
+    cursor: pointer;
+    font-size: 1em; /* Ajuste la taille de la police si nécessaire */
+    width: 100px; /* Largeur du bouton */
+    height: 100px; /* Hauteur du bouton (doit être identique à la largeur pour un cercle parfait) */
+    border-radius: 50%; /* Rend le bouton circulaire */
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: 135px;
-    width: 135px;
-    justify-content: space-around;
-    padding: 128px 128px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase; /* Optionnel : stylise le texte en majuscules */
+    transition: transform 0.3s ease; /* Transition sur la propriété transform */
     position: relative;
-    transition: padding 0.3s;
-    
-}
+  }
+  
+  .button-entree {
+    background-color: #090505;
+    border: none;
+    border-radius: 50%; /* Rend le bouton circulaire */
+    padding: 150px; /* Ajuste la taille de ton bouton */
+    cursor: pointer;
+    transition: transform 0.3s; /* Transition pour le scale */
+  }
+  
+  .button-entree:hover {
+    transform: scale(0.7); /* Agrandit le bouton quand on survole */
+  }
+  
+  .button-text {
+    font-family: SF Pro Display;
+    color: #B0B0B0;
+    transition: transform 0.3s; /* Transition pour le texte */
+  }
+  
+  .button-entree:hover .button-text {
+    transform: scale(0.9); /* Réduit la taille du texte pour annuler l'effet du bouton */
+  }
 
-.entree .div-wrapper:hover {
-    transition: 0.3s;
-    transform: scale(0.8);
-}
-
-.entree .text-wrapper {
-    color: #afafaf;
-    font-family: "SF Pro Display-Light", Helvetica;
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 0;
-    line-height: normal;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-    transition: color 0.3s; /* Ajoutez une transition pour l'effet de survol */
-}
-
-@media screen and (max-width: 600px) {
-    .entree .div-wrapper {
-        height: 100px;
-        width: 100px;
-        padding: 64px 64px;
+  @media (max-width: 768px) {
+    .button-entree {
+        padding: 100px; /* Taille plus petite pour les tablettes */
     }
 }
 
-@media screen and (max-width: 400px) {
-    .entree .div-wrapper {
-        height: 80px;
-        width: 80px;
-        padding: 32px 32px;
+/* Responsive pour mobiles */
+@media (max-width: 480px) {
+    .button-entree {
+        padding: 50px; /* Taille encore plus petite pour les mobiles */
     }
 }

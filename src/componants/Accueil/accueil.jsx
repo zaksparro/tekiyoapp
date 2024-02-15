@@ -4,7 +4,7 @@ import "./accueil.css";
 import Button from "../Button/button";
 import { useNavigate } from 'react-router-dom';
 
-export const Accueil = () => {
+const Accueil = () => {
   let navigate = useNavigate();
 
   const handleButtonClick = () => {
@@ -12,12 +12,10 @@ export const Accueil = () => {
   };
 
   const handleBox3Click = () => {
-    navigate('/box3'); // Redirection vers Box3
+    navigate('/boxparent3'); // Redirection vers Box3
   };
 
-  const handleTestClick = () => {
-    navigate('/test'); // Redirection vers un chemin test (à définir dans App.js)
-  };
+  // J'ai supprimé handleTestClick car il n'était pas utilisé dans ce code
 
   return (
     <div className="accueil">
@@ -31,7 +29,6 @@ export const Accueil = () => {
         <div className="button-container">
           <Button text="CRÉER UN SITE INTERNET" onClick={handleButtonClick} />
           <Button text="NOS SERVICES" isTransparent textColor="#090505" arrowColor="#090505" onClick={handleBox3Click} />
-          <Button text="TEST" onClick={handleTestClick} /> {/* Nouveau bouton test */}
         </div>
       </div>
       <div className="section2">

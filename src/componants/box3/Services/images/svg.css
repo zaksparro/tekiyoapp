@@ -1,0 +1,93 @@
+.image-container {
+    /* Dimensionne le conteneur selon les besoins de ton design */
+    width: 100%; /* Utilise la largeur originale du SVG pour référence */
+    height: 301px; /* Utilise la hauteur originale du SVG pour référence */
+    position: relative; /* Position relative pour le positionnement absolu des enfants */
+    border-radius: 24px;
+  }
+  
+  .masked-image {
+    /* Applique le SVG comme masque sur l'image */
+    -webkit-mask-image: url('./mask.svg'); /* Pour les navigateurs WebKit comme Safari */
+    mask-image: url('./mask.svg'); /* Standard pour la plupart des autres navigateurs */
+    -webkit-mask-size: cover; /* S'assure que le masque couvre l'image pour WebKit */
+    mask-size: cover; /* S'assure que le masque couvre l'image */
+    -webkit-mask-position: center; /* Centre le masque sur l'image pour WebKit */
+    mask-position: center; /* Centre le masque sur l'image */
+    -webkit-mask-repeat: no-repeat; /* Empêche le masque de se répéter pour WebKit */
+    mask-repeat: no-repeat; /* Empêche le masque de se répéter */
+    width: 100%; /* Prend toute la largeur du conteneur */
+    height: 100%; /* Prend toute la hauteur du conteneur */
+    position: absolute; /* Position absolue pour superposer l'image sur le masque */
+    top: 0; /* Aligné en haut */
+    left: 0; /* Aligné à gauche */
+    border-radius: 24px;
+    object-fit: cover;
+  }
+
+  .image-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%; /* Ajuste la hauteur du dégradé selon le besoin */
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    z-index: 1; /* Assure que le dégradé se situe au-dessus de l'image */
+    border-radius: 24px;
+  }
+
+  .svg-container {
+    /* ... autres propriétés de style déjà définies ... */
+    border-radius: 24px;
+    overflow: hidden; /* Assure que le contenu débordant est coupé par les bords arrondis */
+  }
+  .responsive-svg {
+    border-radius: 24px;
+    /* Autres styles pour le SVG */
+  }
+
+  .service-title {
+    z-index: 2;
+    color: #B0B0B0;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    font-size: 8vh;
+    left: 0;
+    font-weight: 100;
+    position: absolute;
+    bottom: 0;
+  }
+  .service-number {
+    z-index: 2;
+    color: #B0B0B0;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    font-size: 12vh;
+    right: 0;
+    font-weight: 100;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .service-title, .service-number {
+    margin: 0 10px 10px;
+  }
+
+  .selected {
+    /* Styles pour l'élément lorsqu'il est sélectionné */
+    width: 100%; /* Exemple: prend toute la largeur disponible */
+    height: auto; /* Exemple: ajuste la hauteur automatiquement */
+    /* Ajoutez d'autres propriétés de style si nécessaire */
+  }
+
+  .hidden {
+  display: none; /* Masque l'élément */
+}
+
+  @media screen and (max-width: 768px) {
+    .image-container, .masked-image, .responsive-svg {
+      border-radius: 24px;
+    }
+  }
+  
